@@ -1,0 +1,58 @@
+div{
+    margin: 0.2%;
+}
+
+#app{
+    margin: 0px;
+}
+
+nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm{
+    background-color: rgba(255, 255, 255, 0.8)!important;
+}
+
+div.card{
+    background-color: rgba(255, 255, 255, 0.75);
+    font-weight: bold;
+}
+
+div.col-md-8{
+    max-width: 54%;
+}
+
+#username.red{
+    border-color: red;
+}
+
+#username.green{
+    border-color: green;
+}
+
+#userUsed.view{
+    display: block;
+}
+
+.errore{
+    color: red;
+    text-align: center;
+}
+
+body{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a{
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+form{
+    text-align: right;
+}
+
+@media (max-width:500px){
+    body{
+        background-size: 700px 100%;
+    }
+}

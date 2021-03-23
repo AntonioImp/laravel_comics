@@ -1,0 +1,317 @@
+body{
+    margin: 0px;
+    background-image: url("../images/MarvelComics.jpg");
+    background-size: 100%;
+}
+
+#logout-form{
+    display: none;
+}
+
+#contenitore #linkMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right: 1.5px solid black;
+    background-color: rgba(165, 42, 42);
+
+    transition: width 0.4s ease-in-out;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+
+    top: 0px;
+}
+
+#contenitore #linkMenu:hover{
+    justify-content: initial;
+    width: 150px;
+}
+
+#contenitore #linkMenu:hover #utente,
+#contenitore #linkMenu:hover #welcome,
+#contenitore #linkMenu:hover a{
+    transition: font-size 0.4s ease-in-out;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+
+#utente{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#welcome,
+#utente{
+    font-size: 0em;
+}
+
+.linkP{
+    padding: 5px 10px 5px 5px;
+    text-decoration-line: none;
+    font-size: 0em;
+    cursor: pointer;
+}
+
+#logo{
+    width: 0%;
+    height: 0%;
+}
+
+#contenitore #linkMenu:hover #logo{
+    width: 100%;
+    height: 20%;
+    transition: height 0.4s ease-in-out;
+}
+
+#contenitore #linkMenu a:hover{
+    background-color: rgba(87, 87, 87, 0.65);
+    color: yellow;
+}
+
+#contenitore{
+    text-align: center;
+}
+
+#contenuto{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+
+@media (max-width: 500px){
+    #contenuto{
+        margin-left: 16%;
+    }
+}
+
+#creazioneRaccolta,
+.raccolta{
+    height: 205px;
+    width: 205px;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+}
+
+#creazioneRaccolta img,
+.raccolta img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#creazioneRaccolta input{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+    width: 205px;
+    font-size: 0.94em;
+}
+
+#creazioneRaccolta button{
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 30px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+h1{
+    margin-top: 10px;
+    color: white;
+}
+
+#utente,
+.raccolta h1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+.raccolta h1{
+    font-size: 2em;
+}
+
+#menu{
+    transition: font-size 0.4s ease-out;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+}
+
+#linkMenu:hover #menu{
+    visibility: hidden;
+    font-size: 0;
+}
+
+#utente:hover,
+.raccolta h1:hover{
+    overflow: visible;
+    text-overflow: initial;
+    white-space: initial;
+    color: black;
+    position: relative;
+    z-index: 2;
+    border-radius: 25px;
+}
+
+.raccolta h1:hover{
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+#creazioneRaccolta{
+    background-color: rgb(155, 155, 155);
+    cursor: pointer;
+}
+
+.raccolta:hover{
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+form label{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#ric{
+    margin-top: 25px;
+    width: 600px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#search{
+    background-color: rgba(165, 42, 42, 0.7);
+    color: white;
+}
+
+@media (max-width: 500px){
+    #ric{
+        width: 300px;
+    }
+}
+
+#sub{
+    margin-top: 25px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#modal-view {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+
+#modal-view img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#creazioneRaccolta .hidden,
+#modal-view.hidden {
+    display: none;
+}
+
+#modal-view h1{
+    color: white;
+    font-size: 1.8em;
+}
+
+#modal-view button{
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.raccolta .del{
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin-left: -40px;
+    text-align: right;
+    position: absolute;
+}
+
+#initial{
+    display: initial;
+}
+
+.aggiuntaContenuto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#raccolte{
+    border-radius: 20px;
+    margin-right: 5vh;
+}
+
+#emptyRes{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width: 500px){
+    form{
+        margin-left: 20px;
+    }
+    form label{
+        font-size: 25px;
+    }
+    #sub{
+        margin-left: -20px;
+    }
+    #modal-view div{
+        margin-left: 70px;
+    }
+}
+
+.red{
+    border-color: red;
+}
+
+#errore{
+    color: red;
+    text-align: center;
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    display: inline-block;
+}
